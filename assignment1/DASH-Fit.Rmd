@@ -1,5 +1,11 @@
-
-
 ```{r}
-data <- read.csv(file = 'data/car-speeds.csv')
+library(lme4)
+```
+```{r}
+mydata <- read.csv(file = 'a17_tw_windows.txt', sep = "\t")
+print(mydata)
+```
+```{r}
+
+glmer(correct ~ -1 + (1|user_id) + (1|skill_id) + ltc_0 + lop_0 + ltc_1 + lop_1  + ltc_2 + lop_2 + ltc_3 + lop_3 + ltc_4 + lop_4,data=mydata)
 ```
