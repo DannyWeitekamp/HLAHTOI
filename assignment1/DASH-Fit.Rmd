@@ -1,0 +1,5 @@
+
+
+```{r}
+data <- read.csv(file = 'data/car-speeds.csv')
+```
